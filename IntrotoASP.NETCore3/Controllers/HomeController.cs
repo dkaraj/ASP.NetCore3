@@ -21,20 +21,32 @@ namespace IntrotoASP.NETCore3.Controllers
         {
             return View();
         }
+        [Authorize(Policy ="Claim.DoB")]
+        public IActionResult SecretPolicy()
+        {
+            return View("Secret");
+        }
+        [Authorize(Roles ="Admin")]
+        public IActionResult SecretRole()
+        {
+            return View("Secret");
+        }
         public IActionResult Authenticate()
         {
             var testClaims = new List<Claim>()
             {
                 new Claim(ClaimTypes.Name,"John"),
- 
-                new Claim("DrivingLicense","A+"),
+                new Claim(ClaimTypes.DateOfBirth,"02/02/1992"),
+                new Claim(ClaimTypes.Role,"Admin"),
+                new Claim("test.Says","First Test"),
+
             };
             var licenseClaims = new List<Claim>()
             {
                 
                 new Claim(ClaimTypes.Name,"Jack"),
-            
-                new Claim("test.Says","First Test"),
+                new Claim("DrivingLicense","A+"),
+               
             };
         
             //Create identity

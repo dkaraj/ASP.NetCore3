@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics", "IntrotoASP.NETCore3\Basics.csproj", "{6ED18FFF-4032-45C9-A3EB-C20AD3DE12CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityTest", "IdentityTest\IdentityTest.csproj", "{AC58248B-0E4E-42B7-888A-F7FDCAF7CEC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6ED18FFF-4032-45C9-A3EB-C20AD3DE12CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ED18FFF-4032-45C9-A3EB-C20AD3DE12CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ED18FFF-4032-45C9-A3EB-C20AD3DE12CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC58248B-0E4E-42B7-888A-F7FDCAF7CEC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC58248B-0E4E-42B7-888A-F7FDCAF7CEC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC58248B-0E4E-42B7-888A-F7FDCAF7CEC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC58248B-0E4E-42B7-888A-F7FDCAF7CEC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

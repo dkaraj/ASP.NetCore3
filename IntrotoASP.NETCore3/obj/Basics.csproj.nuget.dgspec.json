@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\Authentication\\IntrotoASP.NETCore3\\Basics.csproj": {}
+    "C:\\Users\\User\\source\\repos\\ASP.NetCore3\\IntrotoASP.NETCore3\\Basics.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\Authentication\\IntrotoASP.NETCore3\\Basics.csproj": {
+    "C:\\Users\\User\\source\\repos\\ASP.NetCore3\\IntrotoASP.NETCore3\\Basics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Authentication\\IntrotoASP.NETCore3\\Basics.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ASP.NetCore3\\IntrotoASP.NETCore3\\Basics.csproj",
         "projectName": "Basics",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Authentication\\IntrotoASP.NETCore3\\Basics.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ASP.NetCore3\\IntrotoASP.NETCore3\\Basics.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Authentication\\IntrotoASP.NETCore3\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\ASP.NetCore3\\IntrotoASP.NETCore3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -42,6 +42,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
