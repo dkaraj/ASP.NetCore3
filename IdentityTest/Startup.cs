@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using IdentityTest;
 using IdentityTest.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -53,7 +55,16 @@ namespace IntrotoASP.NETCore3
             });     
                 
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(config=>
+            {
+                var defaultAuthBuilder = new AuthorizationPolicyBuilder();
+                var defaultAuthPolicy = defaultAuthBuilder
+                    .RequireAuthenticatedUser()
+                    .Build();
+                //config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
+
+            }
+                );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
