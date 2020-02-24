@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using Basics.CustomPolicyProvider;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -28,12 +29,24 @@ namespace IntrotoASP.NETCore3.Controllers
             return View();
         }
         [Authorize(Policy ="Claim.DoB")]
+        [Authorize(Policy = "SecurityLevel.5")]
         public IActionResult SecretPolicy()
         {
             return View("Secret");
         }
         [Authorize(Roles ="Admin")]
         public IActionResult SecretRole()
+        {
+            return View("Secret");
+        }
+
+        [SecurityLevel(5)]
+        public IActionResult SecretLevel()
+        {
+            return View("Secret");
+        }
+        [SecurityLevel(10)]
+        public IActionResult SecretHigherLevel()
         {
             return View("Secret");
         }
@@ -45,6 +58,7 @@ namespace IntrotoASP.NETCore3.Controllers
                 new Claim(ClaimTypes.Name,"John"),
                 new Claim(ClaimTypes.DateOfBirth,"02/02/1992"),
                 new Claim(ClaimTypes.Role,"Admin"),
+                 new Claim(DynamicPolicies.SecurityLevel,"7"),
                 new Claim("test.Says","First Test"),
 
             };
