@@ -144,3 +144,6 @@ C:\Users\User\source\repos\ASP.NetCore3\IntrotoASP.NETCore3\bin\Debug\netcoreapp
 C:\Users\User\source\repos\ASP.NetCore3\IntrotoASP.NETCore3\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\User\source\repos\ASP.NetCore3\IntrotoASP.NETCore3\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\User\source\repos\ASP.NetCore3\IntrotoASP.NETCore3\obj\Debug\netcoreapp3.1\Basics.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\ASP.NetCore3\IntrotoASP.NETCore3\obj\Debug\netcoreapp3.1\Razor\Pages\Razor\Index.cshtml.g.cs
+C:\Users\User\source\repos\ASP.NetCore3\IntrotoASP.NETCore3\obj\Debug\netcoreapp3.1\Razor\Pages\Razor\Secured.cshtml.g.cs
+C:\Users\User\source\repos\ASP.NetCore3\IntrotoASP.NETCore3\obj\Debug\netcoreapp3.1\Razor\Pages\Razor\Policy.cshtml.g.cs

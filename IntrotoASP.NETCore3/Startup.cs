@@ -53,7 +53,25 @@ namespace IntrotoASP.NETCore3
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
             services.AddScoped<IAuthorizationHandler, CookieJarAuthorizationHandler>();
             services.AddScoped<IClaimsTransformation,ClaimsTransformation>();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(config =>
+            {
+
+                var defaultAuthBuilder = new AuthorizationPolicyBuilder();
+                var defaultAuthPolicy = defaultAuthBuilder
+                .RequireAuthenticatedUser()
+                .RequireClaim(ClaimTypes.DateOfBirth)
+                .Build();
+            });
+            services.AddRazorPages()
+                .AddRazorPagesOptions(
+                config=>
+                {
+                    config.Conventions.AuthorizePage("/Razor/Secured");
+                    config.Conventions.AuthorizePage("/Razor/Policy","Admin");
+                    config.Conventions.AuthorizeFolder("/RazorSecured");
+                    config.Conventions.AllowAnonymousToPage("/RazorSecure/Anon");
+
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,6 +94,7 @@ namespace IntrotoASP.NETCore3
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+                endpoints.MapRazorPages();
 
                 //endpoints.MapGet("/", async context =>
                 //{
